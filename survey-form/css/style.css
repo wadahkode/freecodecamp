@@ -1,0 +1,177 @@
+html {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 50px auto;
+  padding: 0;
+}
+
+.anim {
+  animation-name: anim;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.anim-a {
+  width: 2px;
+  height: 2px;
+  margin: 0px auto;
+  position: fixed;
+  border-radius: 50%;
+  background: linear-gradient(35deg, #fdfa1f, #caf52d);
+  transform: scale(1);
+  animation-name: anim;
+  left: 10%;
+  top: 10%;
+}
+
+.anim-b {
+  width: 10px;
+  height: 10px;
+  margin: 0px auto;
+  position: fixed;
+  border-radius: 50%;
+  background: linear-gradient(35deg, #f74842, #f51c1c);
+  transform: scale(1);
+  animation-name: animB;
+  left: 20%;
+  top: 20%;
+}
+
+.anim-c {
+  width: 10px;
+  height: 10px;
+  margin: 0px auto;
+  position: fixed;
+  border-radius: 50%;
+  background: linear-gradient(35deg, #085e1b, #2fee78);
+  transform: scale(1);
+  animation-name: animC;
+  left: 25%;
+  top: 25%;
+}
+
+@keyframes anim {
+  0% {
+    top: 10%;
+    left: 10%;
+    transform: scale(2);
+  }
+  50% {
+    top: 25%;
+    left: 50%;
+    transform: scale(4);
+  }
+  75% {
+    top: 75%;
+    left: 75%;
+    transform: scale(6);
+  }
+  100% {
+    top: 100%;
+    left: 90%;
+    transform: scale(0);
+  }
+}
+
+@keyframes animB {
+  0% {
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    transform: scale(4);
+  }
+  100% {
+    top: 0%;
+    left: 100%;
+    right: 0%;
+    transform: scale(0);
+  }
+}
+
+@keyframes animC {
+  0% {
+    top: 25%;
+    left: 25%;
+    bottom: 25%;
+    right: 100%;
+    transform: scale(4);
+  }
+  100% {
+    top: 100%;
+    left: 0%;
+    bottom: 0%;
+    right: 100%;
+    transform: scale(0);
+  }
+}
+
+header {
+  width: 50%;
+  margin: 0 auto;
+  color: whitesmoke;
+  text-align: center;
+}
+main {
+  position: relative;
+  background-color: rgba(59, 59, 59, 0.644);
+  width: 50%;
+  margin: 50px auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+#survey-form,
+#survey-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+#survey-form {
+  color: rgb(255, 255, 255);
+  gap: 1em;
+}
+
+#survey-form div {
+  gap: 4px;
+}
+
+#survey-form div input,
+#survey-form div select {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 1em;
+}
+
+#survey-form div input:focus,
+#survey-form div select:focus,
+#survey-form div textarea {
+  outline: none;
+}
+
+#survey-form div textarea {
+  height: 80px;
+  resize: none;
+  font-size: 1.2em;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+#survey-form div button {
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: rgb(7, 133, 55);
+  color: whitesmoke;
+  font-size: 1.2em;
+}

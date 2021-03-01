@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="anim anim-a"></div>
+    <div class="anim anim-b"></div>
+    <div class="anim anim-c"></div>
+
+    <header>
+      <nav>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Kerangka kerja javascript yang paling populer</p>
+      </nav>
+    </header>
+
+    <main>
+      <form action="" id="survey-form">
+        <div>
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="masukan email anda"
+            required
+          />
+        </div>
+        <div>
+          <label id="name-label" for="name">Nama</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="nama"
+            required
+          />
+        </div>
+        <div>
+          <label for="number" id="number-label">Umur(tidak harus diisi)</label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            placeholder="umur"
+          />
+        </div>
+        <div>
+          <h2>Opsi mana yang paling menggambarkan peran Anda saat ini?</h2>
+          <select name="dropdown" id="dropdown">
+            <option value="" selected>--pilih--</option>
+            <option value="a">Siswa</option>
+            <option value="b">Pekerjaan penuh waktu</option>
+            <option value="c">Pelajar penuh waktu</option>
+            <option value="d">Memilih untuk tidak menjawab</option>
+            <option value="e">lainnya</option>
+          </select>
+        </div>
+        <div>
+          <h2>Apakah Anda akan merekomendasikan survey ini ke teman?</h2>
+          <label>
+            <input
+              type="radio"
+              name="user-recommend"
+              value="definitely"
+              checked
+            />pastinya
+          </label>
+          <label>
+            <input type="radio" name="user-recommend" value="maybe" />mungkin
+          </label>
+          <label>
+            <input type="radio" name="user-recommend" value="notsure" />tidak
+            yakin
+          </label>
+        </div>
+        <div>
+          <h2>Kerangka kerja javascript mana yang anda gunakan:</h2>
+          <label>
+            <input type="checkbox" name="angular" value="angular" />angular
+          </label>
+          <label>
+            <input type="checkbox" name="react" value="react" />react
+          </label>
+          <label>
+            <input type="checkbox" name="vue.js" value="vue.js" />vue.js
+          </label>
+          <label>
+            <input type="checkbox" name="ember.js" value="ember.js" />ember.js
+          </label>
+          <label>
+            <input type="checkbox" name="meteor" value="meteor" />meteor
+          </label>
+          <label>
+            <input type="checkbox" name="mithril" value="mithril" />mithril
+          </label>
+          <label>
+            <input type="checkbox" name="nodejs" value="nodejs" />nodejs
+          </label>
+          <label>
+            <input type="checkbox" name="polymer" value="polymer" />polymer
+          </label>
+          <label>
+            <input type="checkbox" name="other" value="other" />other
+          </label>
+        </div>
+        <div>
+          <h2>Punya saran?</h2>
+          <textarea name="suggest" placeholder="saran"></textarea>
+        </div>
+        <div>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>

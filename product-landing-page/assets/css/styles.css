@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(212, 211, 211, 0.589);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: white;
+  padding: 0.5rem 4rem;
+}
+
+#nav-bar {
+  display: flex;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-bar h1 {
+  display: flex;
+  column-gap: 12px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+#nav-bar h1 span {
+  align-self: flex-end;
+}
+
+#nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  column-gap: 1.5rem;
+  justify-content: space-between;
+}
+
+#nav-bar ul li a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+}
+
+main {
+  width: 80%;
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+
+#welcome {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  padding: 4rem 0;
+}
+
+#welcome .title,
+#welcome .desc {
+  grid-column: 1 / 5;
+  justify-self: center;
+}
+
+#welcome .title h2 {
+  font-size: 40px;
+}
+
+#welcome .desc form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#welcome .desc form input {
+  border: none;
+  outline: none;
+}
+#welcome .desc form input[type="email"] {
+  width: 300px;
+  padding: 0.677rem 1rem;
+  border-radius: 3rem;
+}
+
+#welcome .desc form input[type="submit"] {
+  width: 200px;
+  background-color: rgb(255, 187, 0);
+  padding: 0.677rem 1rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+@media (max-width: 320px) {
+  header {
+    width: 100%;
+    display: flex;
+    box-shadow: 0 0 1px rgba(51, 51, 51, 0.596);
+  }
+
+  #nav-bar {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #nav-bar h1 {
+    flex: initial;
+  }
+
+  #nav-bar ul {
+    gap: 10px;
+    margin-top: 1.5rem;
+  }
+
+  #nav-bar ul li {
+    display: inline-flex;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #welcome .title {
+    grid-column: span;
+  }
+
+  #welcome .title h2 {
+    font-size: 32px;
+  }
+
+  #welcome .title,
+  #welcome .desc {
+    text-align: center;
+  }
+}
+
+#features {
+  background: transparent;
+  width: 60%;
+  margin: 1rem auto;
+  padding: 4rem 0;
+}
+
+#features ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+}
+
+#daftar-toko {
+  width: max-content;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 200px);
+  gap: 1rem;
+}
+
+#daftar-toko .card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 0.5rem rgba(54, 54, 54, 0.664);
+}
+
+#daftar-toko .card .card-header {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.774);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#daftar-toko .card .card-body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#about-me {
+  width: max-content;
+  margin: 0 auto;
+}
